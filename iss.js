@@ -7,7 +7,9 @@ request('https://api.wheretheiss.at/v1/satellites/25544' , function(err, result)
     } else { 
         var valActual = JSON.parse(result.body);
         var lat = valActual.latitude;
-        var long = valActual.longitude
-        console.log('latitude is:' + lat + ' and longitude is: ' + long);
+        var latEx = lat.toFixed(2);
+        var long = valActual.longitude;
+        var longEx = long.toFixed(2);
+        console.log('latitude is:' + latEx + ' and longitude is: ' + longEx);
     }
 });
